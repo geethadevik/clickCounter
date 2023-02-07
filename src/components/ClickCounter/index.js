@@ -4,8 +4,11 @@ import {Component} from 'react'
 class ClickCounter extends Component {
   state = {count: 0}
 
-  onIncrment = () => {
-    this.setState(prevstate => ({count: prevstate.count + 1}))
+   onIncrement = () => {
+    this.setState(prevState => {
+      console.log(`previous state value ${prevState.count}`)
+      return {count: prevState.count + 1}
+    })
   }
 
   render() {
